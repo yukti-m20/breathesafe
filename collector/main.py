@@ -1,4 +1,4 @@
-﻿"""
+"""
 main.py
 -------
 FastAPI application entry-point for the BreatheSafe collector service.
@@ -154,16 +154,23 @@ async def get_latest():
 async def get_history(hours: int = 24):
     """
     Return up to 500 badge readings from the last *hours* hours, sorted
-    chronologically ascending.
+    chronologically ascending. If OpenSearch has no records or is unreachable,
+    returns rich default diurnal history data.
 
     Query params:
         hours (int, default 24): Window size in hours (max driven by index retention).
     """
     records = opensearch_store.get_history(app.state.os_client, hours=hours)
+    is_default = False
+    if not records:
+        records = opensearch_store.generate_default_history(hours=hours)
+        is_default = True
+
     return {
         "hours":   hours,
         "count":   len(records),
         "records": records,
+        "default": is_default,
     }
 
 

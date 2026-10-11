@@ -6,7 +6,7 @@ import {
 } from 'lucide-react'
 
 export default function ProductLanding({ onNavigate }) {
-  const [productImg, setProductImg] = useState(null)
+  const [productImg, setProductImg] = useState('/hardware_badge.jpg')
 
   const handleImageUpload = (e) => {
     const file = e.target.files?.[0]
