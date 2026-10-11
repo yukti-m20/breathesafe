@@ -37,7 +37,7 @@ BreatheSafe sits in between: it tracks the exact air you breathe every second, c
 
 | Who | What they get |
 | --- | --- |
-| **Wearer (Child / Asthmatic / Senior)** | Wearable micro-badge + OLED line-of-sight alerts; zero learning curve; instant haptic/visual warnings |
+| **Device (Child / Asthmatic / Senior)** | micro-badge + OLED line-of-sight alerts; zero learning curve; instant haptic/visual warnings |
 | **Family & Caregivers** | Live telemetry command view; cumulative toxic dose tracking; notified only on acute hazard |
 | **Emergency Contacts / Doctors** | Automated Twilio voice calls during sustained hazardous exposure spikes with GPS city context |
 
@@ -76,7 +76,7 @@ BreatheSafe is **not** a diagnostic hospital EMR. Family screens always surface 
 
 ```
    ┌───────────────────────────────────────────────────────────────┐
-   │                  ESP32-C3 Wearable Badge                      │
+   │                  ESP32-C3  Badge                      │
    │  MQ-135 Gas Chamber · SSD1306 OLED · Multi-Color LED Alert    │
    └───────────────▲───────────────────────────────┬───────────────┘
                    │ Two-Way HTTP Sync             │ REST / WebSocket
