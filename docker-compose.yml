@@ -1,0 +1,55 @@
+version: '3.8'
+
+services:
+  # 1. FastAPI Collector Service (Backend + AI Strands + Calling Agent)
+  collector:
+    build:
+      context: ./collector
+      dockerfile: Dockerfile
+    container_name: breathesafe-collector
+    ports:
+      - "8000:8000"
+    environment:
+      - ESP32_URL=http://badge.local
+      - POLL_INTERVAL_S=10
+      - OPENSEARCH_HOST=opensearch
+      - OPENSEARCH_PORT=9200
+      - STRANDS_PROVIDER=bedrock
+      - STRANDS_MODEL_ID=us.amazon.nova-lite-v1:0
+      - TWILIO_ACCOUNT_SID=${TWILIO_ACCOUNT_SID:-}
+      - TWILIO_AUTH_TOKEN=${TWILIO_AUTH_TOKEN:-}
+      - TWILIO_FROM_NUMBER=${TWILIO_FROM_NUMBER:-}
+    depends_on:
+      - opensearch
+    restart: unless-stopped
+
+  # 2. React Vite Web Dashboard (Frontend Nginx)
+  dashboard:
+    build:
+      context: ./dashboard
+      dockerfile: Dockerfile
+    container_name: breathesafe-dashboard
+    ports:
+      - "80:80"
+      - "5173:80"
+    depends_on:
+      - collector
+    restart: unless-stopped
+
+  # 3. OpenSearch Time-Series Storage
+  opensearch:
+    image: opensearchproject/opensearch:2.11.0
+    container_name: breathesafe-opensearch
+    environment:
+      - discovery.type=single-node
+      - plugins.security.disabled=true
+      - OPENSEARCH_INITIAL_ADMIN_PASSWORD=AdminPassword123!
+      - "OPENSEARCH_JAVA_OPTS=-Xms512m -Xmx512m"
+    ports:
+      - "9200:9200"
+    volumes:
+      - opensearch-data:/usr/share/opensearch/data
+    restart: unless-stopped
+
+volumes:
+  opensearch-data:

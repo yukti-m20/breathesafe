@@ -1,0 +1,4 @@
+{
+  "summary": "Async badge poller: polls ESP32 badge every POLL_INTERVAL_S seconds, stores readings in OpenSearch, and regenerates AI recommendations on level change or interval expiry.",
+  "updatedAt": "2026-10-09T14:05:23.366889500Z"
+}

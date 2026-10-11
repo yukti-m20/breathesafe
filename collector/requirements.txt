@@ -1,0 +1,7 @@
+fastapi
+uvicorn[standard]
+httpx
+opensearch-py
+strands-agents
+python-dotenv
+pydantic

@@ -1,0 +1,4 @@
+{
+  "summary": "FastAPI application: lifespan startup/shutdown, CORS, REST endpoints for badge data, history, status and proxy commands, plus a WebSocket live-push endpoint.",
+  "updatedAt": "2026-10-09T14:06:04.570346Z"
+}
