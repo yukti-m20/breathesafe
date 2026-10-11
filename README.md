@@ -20,7 +20,7 @@ The wearer (child, commuter, or asthma patient) clips on the ultra-light badge. 
 
 **Track:** **Air Quality & Respiratory Protection**  
 **Hardware Firmware:** [`firmware/firmware.ino`](firmware/firmware.ino) · **Collector Backend:** [`collector/`](collector/) · **Dashboard:** [`dashboard/`](dashboard/)
-
+![BreatheSafe Device](BreatheSafe%20Device%20photo.jpeg)
 ---
 
 ## The problem
