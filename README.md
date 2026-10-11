@@ -10,6 +10,7 @@
 ![ESP32](https://img.shields.io/badge/ESP32--C3-Hardware--First-red)
 ![Cedar](https://img.shields.io/badge/Policy-Cedar-green)
 ![Twilio](https://img.shields.io/badge/Emergency-Twilio%20Voice-crimson)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
 > Most air monitors sit on a wall 5 km away. BreatheSafe travels with your lungs — intervening before toxic air enters your bloodstream.
 
@@ -268,5 +269,6 @@ If physical hardware is offline, the dashboard automatically provides:
 ---
 
 ## License & hackathon submission
-
-Built for the **AWS Open Source Hackathon — Air Quality Track**. Demo-oriented. Protect your breath.
+ 
+Distributed under the **Apache License 2.0**. See [`LICENSE`](LICENSE) for more information.
+Built for the **AWS Open Source Hackathon — Air Quality Track**. Protect your breath.
