@@ -267,6 +267,8 @@ If physical hardware is offline, the dashboard automatically provides:
 - **Wi-Fi Range:** When leaving domestic Wi-Fi, the badge operates in self-contained Hotspot/Autonomous mode until re-entering an indexed network.
 
 ---
+> **AI-Assisted Project:** Parts of this codebase, architecture planning, and documentation were built and tested using [Google Antigravity](https://antigravity.google) (AI Agent & IDE).
+
 
 ## License & hackathon submission
  
