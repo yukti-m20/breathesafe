@@ -254,9 +254,8 @@ If physical hardware is offline, the dashboard automatically provides:
 
 | Member | Focus Area & Ownership |
 | --- | --- |
-| **Yukti M.** | Hardware engineering, ESP32 firmware, MQ-135 calibration, I2C OLED display driver |
-| **Architecture Lead** | Collector API, AWS Strands Agents SDK integration, OpenSearch schema, Twilio calling |
-| **Frontend Engineer** | React dashboard, Recharts diurnal telemetry visualization, Cedar policy UI, test bench |
+| **Yukti Maheshwari** | Hardware engineering, ESP32 firmware, React dashboard, Recharts diurnal telemetry visualization, Cedar policy UI |
+| **Pranjal Verma** | Collector API, AWS Strands Agents SDK integration, OpenSearch schema, Twilio calling |
 
 ---
 
