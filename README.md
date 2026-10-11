@@ -14,7 +14,7 @@
 
 > Most air monitors sit on a wall 5 km away. BreatheSafe travels with your lungs — intervening before toxic air enters your bloodstream.
 
-BreatheSafe is a **hardware-first, agentic respiratory companion** for high-risk individuals: ESP32-C3 wearable micro-badge + MQ-135 semiconductor gas chamber + SSD1306 OLED + AWS Strands Agents SDK + OpenSearch historical diurnal telemetry + consent-aware Twilio emergency voice escalation — built to **ship on AWS**.
+BreatheSafe is a **hardware-first, agentic respiratory companion** for high-risk individuals: ESP32-C3  micro-badge + MQ-135 semiconductor gas chamber + SSD1306 OLED + AWS Strands Agents SDK + OpenSearch historical diurnal telemetry + consent-aware Twilio emergency voice escalation — built to **ship on AWS**.
 
 The wearer (child, commuter, or asthma patient) clips on the ultra-light badge. The badge monitors volatile organic compounds (VOCs), harmful gases, and cumulative toxic inhalation dose. When hazardous spikes occur, the **AWS Strands AI Agent** dynamically evaluates personal vulnerability thresholds, pushes actionable guidance directly onto the badge OLED screen, and automatically dispatches voice and SMS alerts to caregivers if acute exposure persists.
 
